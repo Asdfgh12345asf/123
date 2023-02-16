@@ -1,0 +1,6 @@
+apiVersion: ops.example.com/v1alpha1
+kind: GitOps
+metadata:
+  name: gitops-sample
+spec:
+  # TODO(user): Add fields here

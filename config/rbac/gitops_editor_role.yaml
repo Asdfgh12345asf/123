@@ -1,0 +1,24 @@
+# permissions for end users to edit gitops.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: gitops-editor-role
+rules:
+- apiGroups:
+  - ops.example.com
+  resources:
+  - gitops
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - ops.example.com
+  resources:
+  - gitops/status
+  verbs:
+  - get
